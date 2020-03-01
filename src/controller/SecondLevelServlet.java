@@ -43,7 +43,7 @@ public class SecondLevelServlet extends HttpServlet {
 				System.out.println(output);
 				request.setAttribute("output", output);
 				// System.out.println(output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/secondlevel.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -52,7 +52,7 @@ public class SecondLevelServlet extends HttpServlet {
 			if (endsWith != null) {
 				boolean output = stringboolean.endsWith(input1, input2);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/secondlevel.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -61,7 +61,7 @@ public class SecondLevelServlet extends HttpServlet {
 			if (startsWith != null) {
 				boolean output = stringboolean.startsWith(input1, input2);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/secondlevel.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -70,7 +70,7 @@ public class SecondLevelServlet extends HttpServlet {
 			if (equals != null) {
 				boolean output = stringboolean.equals(input1, input2);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/secondlevel.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -79,13 +79,13 @@ public class SecondLevelServlet extends HttpServlet {
 			if (equalsIgnoreCase != null) {
 				boolean output = stringboolean.equalsIgnoreCase(input1, input2);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/secondlevel.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
 				rd.forward(request, response);
 			}
 		}
 
 		if (thirdLevel != null) {
-			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/thirdlevel.jsp");
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level3.jsp");
 			rd.forward(request, response);
 		}
 
