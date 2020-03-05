@@ -30,8 +30,8 @@
 				
 			<br>
         </form>
-        <img src="./asset/Rectangle 5.png" alt="" class="body1">
-        <img src="./asset/Rectangle 7.png" alt="" class="footer1"> 
+        <img src="./asset/Rectangle 5.svg" alt="" class="body1">
+        <img src="./asset/Rectangle 7.svg" alt="" class="footer1"> 
 
     </div>
 </body>

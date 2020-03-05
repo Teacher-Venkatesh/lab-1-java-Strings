@@ -1,14 +1,14 @@
 body{
              
-            background-color:rgba(122, 229, 253, 0.829);
-        }
-        .cloud{
-            width: 100%;
-        }
-        #top{
-           position: absolute;
-           top: -1%;
-           left: 25%;
+background-color:rgba(122, 229, 253, 0.829);
+}
+.cloud{
+width: 100%;
+ }
+#top{
+position: absolute;
+top: -1%;
+left: 25%;
         }
 .btn{
 position: absolute;
@@ -22,6 +22,8 @@ border-radius: 50px;
 color: white;
 font-size: 36px;
 text-decoration: none;
+font-family:'Courier New', Courier, monospace
+
 }
 a{
     color: aliceblue;
@@ -37,6 +39,9 @@ a{
          color: white;
          font-size: 36px;
          text-decoration: none;
+         color: aliceblue;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace
      }
        h2{
             
@@ -113,7 +118,7 @@ border-radius: 3%;
         #lable2 {
             position: absolute;
             left: 40%;
-            top: 30%;
+            top: 32%;
 
         }
 
@@ -135,7 +140,7 @@ border-radius: 3%;
             color: white;
         }
         
-       input[type=text] {
+input[type=text] {
 	width: 50%;
 	padding: 6px 10px;
 	margin: 8px 0;
@@ -185,4 +190,5 @@ input[type=submit] {
 	cursor: pointer;
 	display: inline-block;
 }
+
        

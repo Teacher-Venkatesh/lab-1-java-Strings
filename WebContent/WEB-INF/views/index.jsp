@@ -11,6 +11,9 @@
 
  <img src="./asset/Clouds.png" alt="cloud" class="cloud" srcset="">
    <img src="./asset/Group 10.svg" id="top">
-   <button class="btn"><a href="level.html">Pay Card</a></button>
+   <form action="/WebApp_Strings/firstlevel" method="post" >
+   <!-- <button class="btn"><a href="/level.html">Pay Card</a></button>   -->
+   <button class="btn" id="level8" name="level">Pay Card</button>
+   </form>
 </body>
 </html>

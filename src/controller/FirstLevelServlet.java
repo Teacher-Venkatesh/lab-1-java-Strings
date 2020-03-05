@@ -18,7 +18,7 @@ public class FirstLevelServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		RequestDispatcher rs = this.getServletContext().getRequestDispatcher("/index.jsp");
+		RequestDispatcher rs = this.getServletContext().getRequestDispatcher("/WEB-INF/views/index.jsp");
 		rs.forward(request, response);
 	}
 
@@ -33,15 +33,28 @@ public class FirstLevelServlet extends HttpServlet {
 		String trim = request.getParameter("trim");
 		String seeAnswer = request.getParameter("seeanswer");
 		String secondLevel = request.getParameter("secondlevel");
+		String level = request.getParameter("level");
+		String choose = request.getParameter("choose");
 
 		string.setInput(input);
+		
+		if (level != null)
+		{
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level.html");
+				rd.forward(request, response);
+		}
+		if (choose != null)
+		{
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
+				rd.forward(request, response);
+		}
 
 		if (seeAnswer != null) {
 			if (lowerCase != null) {
 				String output = string.lower(input);
 				// System.out.println(output);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level1.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
 			/*
@@ -57,7 +70,7 @@ public class FirstLevelServlet extends HttpServlet {
 			if (upperCase != null) {
 				String output = string.upper(input);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level1.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -66,7 +79,7 @@ public class FirstLevelServlet extends HttpServlet {
 			if (firstCharacter != null) {
 				String output = string.firstCharacter(input);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level1.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -75,7 +88,7 @@ public class FirstLevelServlet extends HttpServlet {
 			if (length != null) {
 				String output = string.length(input);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level1.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
 		}
@@ -84,13 +97,13 @@ public class FirstLevelServlet extends HttpServlet {
 			if (trim != null) {
 				String output = string.trim(input);
 				request.setAttribute("output", output);
-				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level1.jsp");
+				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level1.jsp");
 				rd.forward(request, response);
 			}
 		}
 
 		if (secondLevel != null) {
-			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/level2.jsp");
+			RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level2.jsp");
 			rd.forward(request, response);
 		}
 
